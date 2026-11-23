@@ -1,0 +1,96 @@
+# Which track plays where. One row per track. Edit freely; any row whose file is missing is just skipped.
+#
+# place   : a DCSS place (Dungeon, Lair, Orcish Mines, Elven Halls, Vaults, Depths, Crypt, Tomb, Zot, Swamp, Shoals,
+#           Snake Pit, Spider Nest, Slime Pits, Temple, Hell, Dis, Gehenna, Cocytus, Tartarus, Pandemonium, Abyss,
+#           Ziggurat, Bazaar, Trove, Sewer, Ossuary, Bailey, Gauntlet, Ice Cave, Volcano, Wizlab, Desolation,
+#           Necropolis, ...) or a trigger: @StartGame  @Orb  @EndGame
+# depth   : empty = the whole branch, N = that depth only, A-B = a range of depths (e.g. 1-4)
+# weight  : > 0. Several rows for the same place/depth are a weighted random pick each time you arrive.
+#           Packs mix: DWEM pools the entries of ALL your packs, so weight 1 against a pack whose weights add up to 1
+#           is a 50/50 split, 2 is about 67%, 3 is 75% (see the README table).
+# file    : a file in your audio folder. The extension is optional (title matches title.mp3, title.flac, ...).
+#
+# Note: a depth row is ADDED to any whole-branch row for the same place as another candidate; it does not replace it.
+# So give a place either one whole-branch row, or per-depth rows, not both, unless you want them mixed.
+#
+# This is the author's own selection from a Zelda soundtrack library (paths are relative to --audio). Replace it with yours.
+# Weights per place add up to 1.0 so the pack mixes 50/50 with a pack like DCSS-UST whose weights add up to 1.0 per place.
+#
+place,depth,weight,file
+@StartGame,,0.5,01 - The Legend of Zelda (1986)/002 - Title Theme
+@StartGame,,0.5,05 - Ocarina of Time (1998)/001 - Title Theme
+@EndGame,,1,12 - The Minish Cap (2004)/034 - Game Over
+@Orb,,0.5,01 - The Legend of Zelda (1986)/012 - Ending Theme
+@Orb,,0.5,12 - The Minish Cap (2004)/057 - A Kingdom Restored
+Dungeon,1-4,0.4,05 - Ocarina of Time (1998)/006 - Kokiri Forest
+Dungeon,1-4,0.3,01 - The Legend of Zelda (1986)/003 - Overworld Theme
+Dungeon,1-4,0.3,03 - A Link to the Past (1991)/010 - Hyrule Field Main Theme
+Dungeon,5-9,0.4,05 - Ocarina of Time (1998)/038 - Dodongo's Cavern
+Dungeon,5-9,0.3,04 - Link's Awakening (1993)/024 - Tail Cave
+Dungeon,5-9,0.3,02 - Zelda II - The Adventure of Link (1987)/008 - Palace Theme
+Dungeon,10-15,0.4,03 - A Link to the Past (1991)/027 - Dungeon of Shadows
+Dungeon,10-15,0.3,05 - Ocarina of Time (1998)/078 - Ganon's Castle Underground
+Dungeon,10-15,0.3,06 - Majora's Mask (2000)/103 - Stone Tower Temple (Reality)
+Temple,,0.5,05 - Ocarina of Time (1998)/042 - Great Fairy's Fountain
+Temple,,0.5,05 - Ocarina of Time (1998)/046 - Temple of Time
+Lair,,0.5,05 - Ocarina of Time (1998)/037 - Lost Woods
+Lair,,0.5,04 - Link's Awakening (1993)/015 - Mysterious Woods
+Swamp,,0.6,06 - Majora's Mask (2000)/041 - Southern Swamp
+Swamp,,0.4,11 - Four Swords Adventures (2004)/026 - the swamp
+Shoals,,0.5,06 - Majora's Mask (2000)/080 - Great Bay Coast
+Shoals,,0.5,13 - Twilight Princess (2006)/140 - Lake Hylia
+Snake Pit,,0.5,08 - Oracle of Seasons (2001)/021 - Level 2 ~ Snake's Remains
+Snake Pit,,0.5,13 - Twilight Princess (2006)/201 - Gerudo Desert
+Spider Nest,,0.5,05 - Ocarina of Time (1998)/061 - Forest Temple
+Spider Nest,,0.5,06 - Majora's Mask (2000)/051 - Woodfall Temple
+Slime Pits,,0.5,05 - Ocarina of Time (1998)/067 - Water Temple
+Slime Pits,,0.5,06 - Majora's Mask (2000)/093 - Great Bay Temple
+Orcish Mines,,0.5,13 - Twilight Princess (2006)/121 - Goron Mines
+Orcish Mines,,0.5,05 - Ocarina of Time (1998)/035 - Goron City
+Elven Halls,,0.5,03 - A Link to the Past (1991)/006 - Majestic Castle
+Elven Halls,,0.5,10 - The Wind Waker (2002)/076 - Hyrule Castle
+Vaults,,0.5,05 - Ocarina of Time (1998)/072 - Spirit Temple
+Vaults,,0.5,03 - A Link to the Past (1991)/016 - Lost Ancient Ruins
+Depths,,0.5,13 - Twilight Princess (2006)/266 - Palace of Twilight (Interior)
+Depths,,0.5,06 - Majora's Mask (2000)/100 - Ikana Castle
+Crypt,,0.5,05 - Ocarina of Time (1998)/070 - Shadow Temple
+Crypt,,0.5,06 - Majora's Mask (2000)/096 - Ikana Valley
+Tomb,,0.5,12 - The Minish Cap (2004)/048 - Royal Crypt
+Tomb,,0.5,08 - Oracle of Seasons (2001)/036 - Level 7 ~ Explorer's Crypt
+Zot,,0.5,10 - The Wind Waker (2002)/113 - Ganon's Castle
+Zot,,0.5,13 - Twilight Princess (2006)/283 - Hyrule Castle
+Hell,,1,03 - A Link to the Past (1991)/024 - Dark Golden Land
+Dis,,1,02 - Zelda II - The Adventure of Link (1987)/015 - Great Palace Theme
+Gehenna,,0.5,05 - Ocarina of Time (1998)/064 - Fire Temple
+Gehenna,,0.5,11 - Four Swords Adventures (2004)/025 - tower of flames
+Cocytus,,0.5,05 - Ocarina of Time (1998)/065 - Ice Cavern
+Cocytus,,0.5,13 - Twilight Princess (2006)/219 - Snowpeak Ruins (Interior)
+Tartarus,,0.5,03 - A Link to the Past (1991)/023 - Priest of the Dark Order
+Tartarus,,0.5,06 - Majora's Mask (2000)/104 - Stone Tower Temple (Illusion)
+Pandemonium,,0.5,06 - Majora's Mask (2000)/024 - Final Hours
+Pandemonium,,0.5,13 - Twilight Princess (2006)/176 - Light And Darkness
+Abyss,,0.5,04 - Link's Awakening (1993)/078 - Wind Fish's Egg
+Abyss,,0.5,06 - Majora's Mask (2000)/005 - Majoras Theme
+Ziggurat,,0.5,05 - Ocarina of Time (1998)/082 - Last Battle
+Ziggurat,,0.5,13 - Twilight Princess (2006)/294 - Ganon Battle
+Bazaar,,0.5,05 - Ocarina of Time (1998)/023 - Market
+Bazaar,,0.5,05 - Ocarina of Time (1998)/010 - Shop
+Trove,,0.5,06 - Majora's Mask (2000)/016 - Shop
+Trove,,0.5,10 - The Wind Waker (2002)/008 - Beedle's Shop
+Sewer,,0.5,01 - The Legend of Zelda (1986)/004 - Underworld Theme
+Sewer,,0.5,06 - Majora's Mask (2000)/004 - Cave
+Ossuary,,0.5,04 - Link's Awakening (1993)/056 - Ghost's House
+Ossuary,,0.5,13 - Twilight Princess (2006)/096 - Graveyard
+Bailey,,0.5,03 - A Link to the Past (1991)/008 - Princess Zelda's Rescue
+Bailey,,0.5,10 - The Wind Waker (2002)/074 - Sealed Hyrule Castle
+Ice Cave,,0.5,13 - Twilight Princess (2006)/215 - Snowpeak
+Ice Cave,,0.5,06 - Majora's Mask (2000)/060 - Snow Mountain
+Volcano,,0.5,01 - The Legend of Zelda (1986)/005 - Death Mountain Theme
+Volcano,,0.5,13 - Twilight Princess (2006)/097 - Death Mountain
+Wizlab,,0.5,06 - Majora's Mask (2000)/007 - Happy Mask Salesman
+Wizlab,,0.5,06 - Majora's Mask (2000)/083 - Marine Research Laboratory
+Gauntlet,,1,15 - Spirit Tracks (2009)/076 - Dungeon Gauntlet
+Desolation,,0.5,05 - Ocarina of Time (1998)/071 - Gerudo Valley
+Desolation,,0.5,08 - Oracle of Seasons (2001)/035 - Samasa Desert
+Necropolis,,0.5,05 - Ocarina of Time (1998)/070 - Shadow Temple
+Necropolis,,0.5,12 - The Minish Cap (2004)/052 - Dark Hyrule Castle
